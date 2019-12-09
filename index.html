@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<header>
+	
+	<div class="main">
+		<div class="logo">
+			
+		</div>
+		<ul>
+			<li><a  class="active" href="">HOME</a></li>
+			<li><a href="RESUME.html">ABOUT ME</a></li>
+			<li><a href="events.html">EVENTS</a></li>
+			<li><a class="box" href="signin.html">SIGN-IN</a></li>
+			<li><a class="box" href="HTMLFORMS.html">SIGN-UP</a></li>
+
+		</ul>
+	</div>
+ <div class="title">
+ 	<h5>HELLO, IT'S ME</h5><br>
+ 	<h1>JANREY M. RAMOS</h1><br>
+ 	<h3>Bachelor of Science in Information Technology</h3><br>
+ 	<p>A man can be as great as he want to be.  If you<br> believe in your self and have the courage, the <br>determination, the dedication,  the competitive drive <br> and if you are willing to sacrifice the little things <br> in life and pay the price for the things that are <br>worthwhile, it can be done.
+
+<br>(Vince Lombardi</p>
+ 	
+
+ </div>
+ </header>
+<div class="bground">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="1.jpg" style="width:100%">
+  <div class="text">Its Me Jarey Ramos</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="2.jpg" style="width:100%">
+  <div class="text">This is my Mother and Brother</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="3.jpg" style="width:100%">
+  <div class="text">MY HIGHSCHOOL FRIENDS</div> 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 3</div>
+  <img src="4.jpg" style="width:100%">
+  <div class="text">SENIOR HIGHSCHOOL GRADUATION </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 3</div>
+  <img src="5.jpg" style="width:100%">
+  <div class="text">BSIT FAMILY</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 3</div>
+  <img src="6.jpg" style="width:100%">
+  <div class="text">MY FAMILY ON MOTHER SIDE</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+   <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
